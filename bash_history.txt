@@ -1,0 +1,181 @@
+git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+cd UTN-FRA_SO_Examenes/202406
+ls
+./script_Precondicion.sh
+source ~/.bashrc
+cd
+ls
+sudo apt update
+sudo apt install git
+cd UTN-FRA_SO_Examenes/cd
+sudo fdisk -l
+lsblk
+sudo fdisk /dev/sdc
+sudo pvcreate /dev/sdc1
+sudo pvcreate /dev/sdc2
+pvs
+sudo pvs
+sudo vgcreate vg_datos /dev/sdc1
+sudo vgs
+sudo vgextend vg_datos /dev/sdc2
+sudo vgs
+sudo pvs
+sudo fdisk /dev/sdd
+sudo vgcreate vg_temp /dev/sdd1
+sudo pvs
+sudo lvcreate -L +5M -n lv_docker vg_datos /dev/sdc2
+sudo pvs
+sudo lvcreate -L +4M -n lv_docker vg_datos /dev/sdc2
+sudo lvcreate -L +1.5G -n lv_workareas vg_datos /dev/sdc1
+sudo lvcreate -L 1.5G -n lv_workareas vg_datos /dev/sdc1
+sudo lvcreate -L 1.4G -n lv_workareas vg_datos /dev/sdc1
+sudo lvcreate -L 512M -n lv_swap vg_temp /dev/sdd1
+sudo lvcreate -L 508M -n lv_swap vg_temp /dev/sdd1
+sudo vgs
+sudo fdisk -l
+sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workareas
+sudo mkfs.ext4  /dev/mapper/vg_temp-lv_swap
+sudo mkswap /dev/mapper/vg_temp-lv_swap
+cd /var/lib/docker
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+# Add the repository to Apt sources:
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo docker run hello-world
+cd var/lib/docker
+cd /var/lib/docker/
+cd /var/lib/docker
+sudo cd /var/lib/docker
+sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker/
+df -h
+cd /
+ll
+sudo mkdir Work
+ll
+sudo fdisk -l
+sudo mount /dev/mapper/vg_datos-lv_workareas Work/
+df -h
+free -h
+sudo swapon /dev/mapper/vg_temp-lv_swap
+free -h
+ll
+ls
+/
+cd /
+cd
+cd RTA_Examen_20241109/
+cat Punto_A.sh 
+vim Punto_A.sh 
+cd
+cd UTN-FRA_SO_Examenes/202406
+ls
+cd bash_script
+cat Lista_Usuarios.txt 
+cd
+cd /usr/local/bin/
+ll
+vim Baez_AltaUser-Groups.sh
+sudo vim Baez_AltaUser-Groups.sh
+sudo /usr/local/bin/Baez_AltaUser-Groups.sh santiago ~/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+ls -l /usr/local/bin/Baez_AltaUser-Groups.sh
+sudo chmod +x /usr/local/bin/Baez_AltaUser-Groups.sh
+sudo /usr/local/bin/Baez_AltaUser-Groups.sh santiago ~/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+sudo vim Baez_AltaUser-Groups.sh
+sudo /usr/local/bin/Baez_AltaUser-Groups.sh santiago ~/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+ls
+sudo vgs
+sudo pvs
+cd UTN-FRA_SO_Examenes/202406
+ls
+cd
+cd /usr/local/bin/Baez_AltaUser-Groups.sh 
+cd /usr/local/bin/
+ls
+cd
+~
+cd
+ls
+cd /usr/local/bin/
+ls
+CD
+cd
+vagrant halt
+su - vagrant
+cd /usr/local/bin/
+ls
+vim Baez_AltaUser-Groups.sh 
+cd
+cd UTN-FRA_SO_Examenes/202406
+ls
+cd bash_script/
+ls
+cat Lista_Usuarios.txt 
+cd
+cd /usr/local/bin/
+vim Baez_AltaUser-Groups.sh 
+sudo vim Baez_AltaUser-Groups.sh 
+cd
+cd RTA_Examen_20241109
+ls
+vim Punto_A.sh 
+cd
+cd UTN-FRA_SO_Examenes/202406
+cd
+/usr/local/bin
+ls
+usr/local/bin
+/usr/local/bin/
+/usr/local/bin
+/usr/local/
+/usr/local
+cd
+/usr/local/bin/
+vim /usr/local/bin/Baez_AltaUser-Groups.sh 
+cd
+vim /usr/local/bin/Baez_AltaUser-Groups.sh 
+cd UTN-FRA_SO_Examenes/202406/bash_script/
+ls
+cat Lista_Usuarios.txt 
+cd
+getent group 2P_GDesa
+id 2P_202406_Prog1
+id 2P_202406_Prog2
+id 2P_202406_Test1
+id 2P_202406_Supervisor
+sudo visudo
+getent group 2P_GDesa
+getent group 2P_GTest
+getent group 2PSupervisores
+getent passwd 2P_202406_Prog1
+getent passwd 2P_202406_Prog2
+getent passwd 2P_202406_Test1
+getent passwd 2P_202406_Supervisor
+ls -ld /work/2P_202406_Prog1
+ls -ld /work/2P_202406_Prog2
+ls -ld /work/2P_202406_Test1
+ls -ld /work/2P_202406_Supervisor
+cd
+git clone https://github.com/santiagobaez13/UTNFRA_SO_2do_Parcial_Baez.git
+ls
+UTN-FRA_SO_Examenes/202406
+s
+UTN-FRA_SO_Examenes/202406
+UTN-FRA_SO_Examenes/202406/
+cd UTN-FRA_SO_Examenes/202406/
+ls
+cd
+cp -r UTN-FRA_SO_Examenes/202406 UTNFRA_SO_2do_Parcial_Baez/
+cd UTNFRA_SO_2do_Parcial_Baez/
+ls
+cd 202406/
+ls
+cd
+cp -r RTA_Examen_20241109 UTNFRA_SO_2do_Parcial_Baez/
+history -a
