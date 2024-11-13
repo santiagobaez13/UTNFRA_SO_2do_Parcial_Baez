@@ -179,3 +179,403 @@ ls
 cd
 cp -r RTA_Examen_20241109 UTNFRA_SO_2do_Parcial_Baez/
 history -a
+git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+cd UTN-FRA_SO_Examenes/202406
+ls
+./script_Precondicion.sh
+source ~/.bashrc
+cd
+ls
+sudo apt update
+sudo apt install git
+cd UTN-FRA_SO_Examenes/cd
+sudo fdisk -l
+lsblk
+sudo fdisk /dev/sdc
+sudo pvcreate /dev/sdc1
+sudo pvcreate /dev/sdc2
+pvs
+sudo pvs
+sudo vgcreate vg_datos /dev/sdc1
+sudo vgs
+sudo vgextend vg_datos /dev/sdc2
+sudo vgs
+sudo pvs
+sudo fdisk /dev/sdd
+sudo vgcreate vg_temp /dev/sdd1
+sudo pvs
+sudo lvcreate -L +5M -n lv_docker vg_datos /dev/sdc2
+sudo pvs
+sudo lvcreate -L +4M -n lv_docker vg_datos /dev/sdc2
+sudo lvcreate -L +1.5G -n lv_workareas vg_datos /dev/sdc1
+sudo lvcreate -L 1.5G -n lv_workareas vg_datos /dev/sdc1
+sudo lvcreate -L 1.4G -n lv_workareas vg_datos /dev/sdc1
+sudo lvcreate -L 512M -n lv_swap vg_temp /dev/sdd1
+sudo lvcreate -L 508M -n lv_swap vg_temp /dev/sdd1
+sudo vgs
+sudo fdisk -l
+sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workareas
+sudo mkfs.ext4  /dev/mapper/vg_temp-lv_swap
+sudo mkswap /dev/mapper/vg_temp-lv_swap
+cd /var/lib/docker
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+# Add the repository to Apt sources:
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo docker run hello-world
+cd var/lib/docker
+cd /var/lib/docker/
+cd /var/lib/docker
+sudo cd /var/lib/docker
+sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker/
+df -h
+cd /
+ll
+sudo mkdir Work
+ll
+sudo fdisk -l
+sudo mount /dev/mapper/vg_datos-lv_workareas Work/
+df -h
+free -h
+sudo swapon /dev/mapper/vg_temp-lv_swap
+free -h
+ll
+ls
+/
+cd /
+cd
+cd RTA_Examen_20241109/
+cat Punto_A.sh 
+vim Punto_A.sh 
+cd
+cd UTN-FRA_SO_Examenes/202406
+ls
+cd bash_script
+cat Lista_Usuarios.txt 
+cd
+cd /usr/local/bin/
+ll
+vim Baez_AltaUser-Groups.sh
+sudo vim Baez_AltaUser-Groups.sh
+sudo /usr/local/bin/Baez_AltaUser-Groups.sh santiago ~/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+ls -l /usr/local/bin/Baez_AltaUser-Groups.sh
+sudo chmod +x /usr/local/bin/Baez_AltaUser-Groups.sh
+sudo /usr/local/bin/Baez_AltaUser-Groups.sh santiago ~/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+sudo vim Baez_AltaUser-Groups.sh
+sudo /usr/local/bin/Baez_AltaUser-Groups.sh santiago ~/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+ls
+sudo vgs
+sudo pvs
+cd UTN-FRA_SO_Examenes/202406
+ls
+cd
+cd /usr/local/bin/Baez_AltaUser-Groups.sh 
+cd /usr/local/bin/
+ls
+cd
+~
+cd
+ls
+cd /usr/local/bin/
+ls
+CD
+cd
+vagrant halt
+su - vagrant
+cd /usr/local/bin/
+ls
+vim Baez_AltaUser-Groups.sh 
+cd
+cd UTN-FRA_SO_Examenes/202406
+ls
+cd bash_script/
+ls
+cat Lista_Usuarios.txt 
+cd
+cd /usr/local/bin/
+vim Baez_AltaUser-Groups.sh 
+sudo vim Baez_AltaUser-Groups.sh 
+cd
+cd RTA_Examen_20241109
+ls
+vim Punto_A.sh 
+cd
+cd UTN-FRA_SO_Examenes/202406
+cd
+/usr/local/bin
+ls
+usr/local/bin
+/usr/local/bin/
+/usr/local/bin
+/usr/local/
+/usr/local
+cd
+/usr/local/bin/
+vim /usr/local/bin/Baez_AltaUser-Groups.sh 
+cd
+vim /usr/local/bin/Baez_AltaUser-Groups.sh 
+cd UTN-FRA_SO_Examenes/202406/bash_script/
+ls
+cat Lista_Usuarios.txt 
+cd
+getent group 2P_GDesa
+id 2P_202406_Prog1
+id 2P_202406_Prog2
+id 2P_202406_Test1
+id 2P_202406_Supervisor
+sudo visudo
+getent group 2P_GDesa
+getent group 2P_GTest
+getent group 2PSupervisores
+getent passwd 2P_202406_Prog1
+getent passwd 2P_202406_Prog2
+getent passwd 2P_202406_Test1
+getent passwd 2P_202406_Supervisor
+ls -ld /work/2P_202406_Prog1
+ls -ld /work/2P_202406_Prog2
+ls -ld /work/2P_202406_Test1
+ls -ld /work/2P_202406_Supervisor
+cd
+git clone https://github.com/santiagobaez13/UTNFRA_SO_2do_Parcial_Baez.git
+ls
+UTN-FRA_SO_Examenes/202406
+s
+UTN-FRA_SO_Examenes/202406
+UTN-FRA_SO_Examenes/202406/
+cd UTN-FRA_SO_Examenes/202406/
+ls
+cd
+cp -r UTN-FRA_SO_Examenes/202406 UTNFRA_SO_2do_Parcial_Baez/
+cd UTNFRA_SO_2do_Parcial_Baez/
+ls
+cd 202406/
+ls
+cd
+cp -r RTA_Examen_20241109 UTNFRA_SO_2do_Parcial_Baez/
+history -a
+cp ~/.bash_history UTNFRA_SO_2do_Parcial_Baez/bash_history.txt
+ls UTNFRA_SO_2do_Parcial_Baez/
+cd UTNFRA_SO_2do_Parcial_Baez/
+git init
+git add .
+git commit -m "ADD: Creacion de carpetas"
+git config --global user.name "santiago"
+git config --global user.email "contcsantiagobaez@gmail.com"
+git commit -m "ADD: Creacion de carpetas"
+git push origin main
+git status
+cd
+cd UTNFRA_SO_2do_Parcial_Baez/202406/docker/
+ls
+vim index.html 
+cat index.html 
+LS
+ls
+docker ps
+/
+cat index.html 
+d
+cd
+apt install tree
+sudo apt install tree
+tree
+df -h
+cd
+df -h
+sudo fdisk -l
+cd /dev/mapper/vg_datos
+df-h
+df -h
+cd UTN-FRA_SO_Examenes/
+df -h
+cd
+ll
+cd ./
+cd
+lsblk
+sudo vgs
+cd /var/lib/docker
+sudo cd /var/lib/docker
+cd /var/lib/docker/
+ls /var/lib/docker/
+sudo cd /var/lib/docker/
+df -h
+ll
+cd ./
+cd /.
+ls
+ll
+tree
+sudo  systemctl status docker
+cat /etc/group
+cd
+vagrant ssh
+vagrant halt
+sudo shutdown now
+ls
+cd UTNFRA_SO_2do_Parcial_Baez/
+ls
+cd 202406/
+ls
+cd docker/
+ls
+sudo vim index.html 
+cd
+ls
+cd UTNFRA_SO_2do_Parcial_Baez/
+ls
+vim bash_history.txt 
+sudo pvs
+ls
+vim bash_history.txt 
+cd
+sudosystemctl status docker
+sudo systemctl status docker
+cat etc/groups
+cat etc/group
+cat /etc/group
+sudo usermod -a -G docker santiago
+cat /etc/group
+docker --help
+cd UTNFRA_SO_2do_Parcial_Baez/
+cd 202406/
+cd docker/
+docker build -t web1-baez .
+docker run -d -p 8080:80 -v "$PWD":/usr/share/nginx/html nginx
+docker ps
+sudo apt update
+sudo apt install net-tools
+sudo netstat -putona | grep ":80"
+sudo docker ps
+cd
+cd UTNFRA_SO_2do_Parcial_Baez/202406/bash_script/
+ls
+cd
+ll
+cd ./
+cd
+ls
+ll
+../
+cd ../
+ls
+ll
+cd santiago/
+ll
+cd /user/local/bin
+../
+cd ../
+cd local/bin
+ll
+cd ./
+ll
+cd ../
+ll
+cd /usr/local/bin/
+ll
+vim Baez_AltaUser-Groups.sh 
+cd
+ll
+cd UTNFRA_SO_2do_Parcial_Baez/202406/docker/
+sudo docker ps
+sudo netstat -tuln | grep 8080
+cd /usr/share/nginx/html
+ls
+cat /usr/share/nginx/html/index.html
+ls -l
+docker inspect 50a74eb44b5f
+docker logs 50a74eb44b5f
+ls
+docker exec -it 50a74eb44b5f bash
+ls /usr/share/nginx/html
+vim index.html 
+docker ps
+docker exec -it 50a74eb44b5f ls /usr/share/nginx/html
+docker stop 50a74eb44b5f
+docker rm 50a74eb44b5f
+docker run -d -p 8080:80 -v "$PWD":/usr/share/nginx/html nginx
+sudo docker ps
+sudo netstat -tuln | grep 8080
+docker run -d -p 8080:80 -v "$PWD":/usr/share/nginx/html nginx
+sudo ufw allow 8080
+docker exec -it 50a74eb44b5f curl localhost
+docker exec -it 23d69c458d25 curl localhost
+ls /usr/share/nginx/html
+sudo ls /usr/share/nginx/html
+cd
+cd /usr/share/
+ls
+/usr/share/nginx
+which nginx
+cd
+which nginx
+cd UTNFRA_SO_2do_Parcial_Baez/202406/docker/
+ll
+docker stop 23d69c458d25
+docker rm 23d69c458d25
+docker ps
+docker pull nginx
+cd
+cd UTNFRA_SO_2do_Parcial_Baez/
+ls
+202406/
+ls
+202406/
+cd 202406/
+ls
+cd bash_script/
+ll
+ls
+cd
+../
+cd .//
+ll
+cd /usr/local/bin/
+ls
+cat Baez_AltaUser-Groups.sh 
+cd 
+cd UTNFRA_SO_2do_Parcial_Baez/202406/bash_script/
+cat Lista_Usuarios.txt 
+cd
+UTNFRA_SO_2do_Parcial_Baez/
+cd UTNFRA_SO_2do_Parcial_Baez/RTA_Examen_20241109/
+ls
+vim Punto_A.sh 
+ls
+cat Punto_A.sh 
+vim Punto Punto_B
+vim Punto_B
+sudo vim Punto_B.sh 
+cat Punto_B.sh 
+cd
+cd UTNFRA_SO_2do_Parcial_Baez/
+git add .
+git commit -m "ADD: Punto 1 y 2 Realizados"
+git push origin main
+ssh-add -l
+ssh-add ~/.ssh/QHuLAuGkpQnPb7v2vWd08PkvdGZ3ywh2i//aal+leY
+git remote -v
+git remote set-url origin https://github.com/santiagobaez13/UTNFRA_SO_2do_Parcial_Baez.git
+git remote -v
+git remote set-url origin git@github.com:santiagobaez13/UTNFRA_SO_2do_Parcial_Baez.git
+git push origin main
+ssh-add -l
+sudo ssh-add -l
+eval "$(ssh-agent -s)"
+cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_ed25519.pub
+git push origin main
+ssh-add -l
+ssh-keygen -t rsa -b 4096 -C "thiagoarias14@gmail.com"
+cat ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+git push origin main
+ls
+git add bash_history.txt 
